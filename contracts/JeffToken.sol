@@ -18,6 +18,7 @@ contract JeffToken {
     constructor(uint256 _initialSupply) {
         totalSupply = _initialSupply;
         balanceOf[msg.sender] = _initialSupply;
+        owner = msg.sender;
     }
 
     function transfer(
