@@ -1,13 +1,12 @@
-# Sample Hardhat Project
+# JEFFTOKEN
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+JeffToken is a simple ERC20 token contract written in Solidity.This contract allows for the creation, transfer, and burning of tokens, as well as the minting of new tokens by the contract owner.
 
-Try running some of the following tasks:
+## Features
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.ts
-```
+- Initial Supply: The contract allows for the creation of an initial supply of tokens upon deployment.
+- Transfer: Users can transfer tokens to other addresses.
+- Burn: Tokens can be burned, reducing the total supply and the balance of the sender.
+- Mint: The contract owner can mint new tokens, increasing the total supply and the balance of the specified address.
+- Ownership: The contract includes an ownership mechanism, ensuring that only the contract owner can mint new tokens.
+
