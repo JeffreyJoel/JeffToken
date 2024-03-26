@@ -1,14 +1,14 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract JeffToken {
+import "./IERC20.sol";
+
+contract JeffToken is IERC20 {
     string public name = "JeffToken";
     string public symbol = "JTK";
     uint256 public totalSupply;
     mapping(address => uint256) public balanceOf;
     address public owner;
-
-    event Transfer(address indexed from, address indexed to, uint256 value);
 
     modifier onlyOwner() {
         require(msg.sender == owner, "You are not the owner");
